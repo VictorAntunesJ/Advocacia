@@ -1,0 +1,651 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* Container principal com imagem de fundo */
+.hero {
+    position: relative;
+    background: url('./assets/Armin-Allmendinger-Lohnt-sich-ein-Unternehmensberater-01-1024x536.webp') center/cover no-repeat;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    /* conteúdo no topo */
+    justify-content: center;
+    text-align: center;
+    padding-top: 240px;
+    background-position: center -140%;
+}
+
+/* Sobreposição escura */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 1;
+}
+
+/* Topo curvo com navegação */
+.curva-topo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #1b1b1b;
+    z-index: 2;
+    border-bottom: 10px solid #d4af37;
+    /* Dourado */
+    border-radius: 0 0 100% 100% / 60%;
+    padding: 40px 0 60px;
+    text-align: center;
+}
+
+/* Cabeçalho do site */
+.header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+/* Conteúdo central (titulo, texto, botões) */
+.conteudo {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.conteudo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.conteudo p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Estilo base para todos os botões */
+.btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    /* começa sem borda visível */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    letter-spacing: 0.5px;
+}
+
+/* Botão amarelo */
+.amarelo {
+    background-color: #fcd535;
+    color: #111;
+}
+
+.amarelo:hover {
+    background-color: #f2c300;
+    border: 2px solid #bfa200;
+    box-shadow: 0 6px 14px rgba(242, 195, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Botão preto */
+.preto {
+    background-color: #111;
+    color: white;
+    border: 2px solid white;
+}
+
+.preto:hover {
+    background-color: #fff;
+    color: #111;
+    border: 2px solid #111;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+
+
+
+/* Seção curva opcional com SVG */
+section {
+    position: relative;
+    background-color: #dddddd4f;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+.parallax {
+    background-image: url('/assets/mesa.jpg');
+    /* substitua pela imagem desejada */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* escurece a imagem para melhor leitura */
+    z-index: 0;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.parallax h2 {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.parallax p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+
+
+
+
+/* Container do simulador */
+.simulador {
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Fundo escuro semi-transparente */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    /* sombra dourada sutil */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    z-index: 3;
+    position: relative;
+}
+
+/* Título */
+.simulador h2 {
+    font-size: 2rem;
+    color: #d4af37;
+    /* Dourado */
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.simulador p {
+    font-size: 1rem;
+    color: #d4af37;
+    /* Dourado */
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Campos de entrada */
+.simulador input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.simulador input:focus {
+    outline: none;
+    transform: scale(1.02);
+    border: 2px solid #d4af37;
+}
+
+/* Botão */
+.simulador button {
+    width: 100%;
+    padding: 14px;
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.simulador button:hover {
+    background-color: #b9972c;
+    transform: scale(1.03);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Ajusta os SVGs para se encaixarem perfeitamente */
+section svg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100px;
+    line-height: 0;
+    margin-top: -60px;
+    /* "puxa" o SVG para cima, colando na seção */
+}
+
+.quem-somos {
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+
+
+
+}
+
+.advogados {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    /* fundo cinza claro */
+}
+
+/* Seu card estilo */
+.advogado {
+    flex: 1 1 320px;
+    max-width: 400px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+}
+
+.advogado img {
+    width: 180px;
+    /* largura fixa */
+    height: 180px;
+    /* altura fixa */
+    border-radius: 50%;
+    /* forma circular */
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    border: 6px solid #be991e;
+    /* borda dourada */
+}
+
+.advogado h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.advogado p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+}
+
+
+.area-atuacao {
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+
+
+
+}
+
+.advogados {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    /* fundo cinza claro */
+}
+
+/* Seu card estilo */
+.advogado {
+    flex: 1 1 320px;
+    max-width: 400px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+}
+
+.advogado img {
+    width: 180px;
+    /* largura fixa */
+    height: 180px;
+    /* altura fixa */
+    border-radius: 50%;
+    /* forma circular */
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    border: 6px solid #be991e;
+    /* borda dourada */
+}
+
+.advogado h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.advogado p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+.parallax2 {
+    background-image: url('./assets/fundo.jpg');
+    /* substitua pela imagem desejada */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.parallax2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* escurece a imagem para melhor leitura */
+    z-index: 0;
+}
+
+.parallax-content2 {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.parallax2 h2 {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.parallax2 p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+
+
+
+
+
+
+.parallax3 {
+    background-image: url('./assets/fundo.jpg');
+    /* substitua pela imagem desejada */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.parallax3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* escurece a imagem para melhor leitura */
+    z-index: 0;
+}
+
+.parallax3-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.parallax3 h2 {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.parallax3 form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.parallax3 p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+
+}
+
+
+/* Título */
+.contato h2 {
+    font-size: 2rem;
+    color: #333333ec;
+    margin-bottom: 20px;
+}
+
+
+/* Campos */
+.contato input,
+.contato textarea {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.6);
+}
+
+/* Botão */
+.btn {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #c29e2c;
+    transform: scale(1.03);
+}
+
+
+footer {
+    text-align: center;
+    padding: 6px;
+    color: white;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: #03200e;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+

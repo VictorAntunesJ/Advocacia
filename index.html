@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advocacia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="inicio" class="hero">
+        <div class="curva-topo">
+            <header class="header">
+                <div class="logo">🌿 Advocacia Moderna</div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">INÍCIO</a></li>
+                        <li><a href="#rescisao">SIMULE SUA RESCISÃO</a></li>
+                        <li><a href="#quem-somos">QUEM SOMOS</a></li>
+                        <!-- <li><a href="#atuacao">ÁREAS DE ATUAÇÃO</a></li> -->
+                        <li><a href="#experiencia">EXPERIÊNCIA</a></li>
+                        <li><a href="#contato">FALE CONOSCO</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="overlay"></div>
+        <div class="conteudo">
+            <h1>
+                Defendendo seus direitos com <br /><strong>Excelência e Compromisso</strong>
+            </h1>
+            <p>Especialistas em direito trabalhista, civil e empresarial</p>
+            <div class="botoes">
+                <a href="#contato" class="btn amarelo">Fale com um Advogado</a>
+                <a href="#mais" class="btn preto">Quero saber Mais</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="rescisao" class="parallax">
+        <div class="parallax-content">
+            <section id="simulador" class="simulador container">
+                <h2>Simule sua Rescisão</h2>
+                <p>Use nosso simulador para descobrir quanto você tem direito.</p>
+                <input type="number" id="salario" placeholder="Salário R$" />
+                <input type="number" id="meses" placeholder="Meses trabalhados" />
+                <button onclick="calcularRescisao()">Calcular</button>
+                <div id="resultado" class="resultado"></div>
+            </section>
+        </div>
+    </section>
+
+    <section style="background-color: #ddd; position: relative;">
+        <!-- CORREÇÃO: viewBox precisa de quatro valores para SVG ser desenhado -->
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none" style="display: block; width: 100%; height: 100px;">
+            <path fill="#222" d="M0,0 C480,150 960,0 1440,150 L1440,0 L0,0 Z"></path>
+        </svg>
+
+        <div id="quem-somos" class="quem-somos">
+            <h2>Quem Somos</h2>
+            <p>
+                Somos um escritório de advocacia especializado em diversas áreas do Direito, com profissionais altamente
+                qualificados e comprometidos com nossos clientes.
+            </p>
+        </div>
+
+        <div class="advogados">
+            <div class="advogado">
+                <img src="./assets/ad2.jpg" alt="Vicente De Paulo De Moura Viana" />
+                <h3>Vicente De Paulo De Moura Viana</h3>
+                <p>
+                    Mestrando em Direito pela FADISP, especialista em Direito Eleitoral pela EJE/TSE e graduado em
+                    Direito pelo UniCEUB. O advogado já foi membro das Comissões de Direito Eleitoral e de Apoio aos
+                    estudantes de Direito do Conselho Federal da OAB e Vice-Presidente da Comissão de Direito Eleitoral
+                    da OAB-PI. Já proferiu palestras em diversos estados do País nas áreas de Direito Constitucional,
+                    Eleitoral e Penal. Já realizou sustentações orais em todas as Cortes Superiores e possui publicações
+                    em obras nacionais. Inscrições:
+                </p>
+            </div>
+            <div class="advogado">
+                <img src="./assets/ad1.jpeg" alt="Geovanne Soares Amorim de Sousa" />
+                <h3>Geovanne Soares Amorim de Sousa</h3>
+                <p>
+                    Mestre em Direito Constitucional pelo IDP, pós-graduado em Direito Tributário e graduado em Direito
+                    pelo UniCEUB. O advogado possui atuação nas áreas de Direito Tributário, Administrativo e Civil.
+                    Possui vasta atuação na Justiça Federal e no Superior Tribunal de Justiça, bem como artigos
+                    publicados em âmbito nacional. Inscrições:
+                </p>
+            </div>
+        </div>
+
+        <!-- CORREÇÃO: viewBox corrigido para desenhar o SVG inferior corretamente -->
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none" style="display: block; width: 100%; height: 100px;">
+            <path fill="#222" d="M0,150 C480,0 960,150 1440,0 L1440,150 L0,150 Z"></path>
+        </svg>
+    </section>
+
+    <section id="experiencia" class="parallax2">
+        <div class="parallax-content2">
+            <h2>Nossos Serviços</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <!-- CORREÇÃO: <i> idealmente deve conter classe ou ser substituído por <span> ou ícone real -->
+                    <i>⚖️</i>
+                    <h3>Consultoria Jurídica</h3>
+                    <p>Orientação legal para pessoas físicas e jurídicas.</p>
+                </div>
+                <div class="card">
+                    <i>📄</i>
+                    <h3>Elaboração de Contratos</h3>
+                    <p>Redação segura para garantir seus direitos.</p>
+                </div>
+                <div class="card">
+                    <i>🏛️</i>
+                    <h3>Defesa em Processos</h3>
+                    <p>Representação completa em diversas áreas do direito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="parallax3">
+        <div class="parallax3-content">
+            <!-- CORREÇÃO: ID duplicado "simulador" removido, pois já foi usado antes -->
+            <section class="simulador container">
+                <h2>Entre em Contato</h2>
+                <form>
+                    <input type="text" placeholder="Seu nome" required />
+                    <input type="email" placeholder="Seu e-mail" required />
+                    <textarea placeholder="Mensagem" required></textarea>
+                    <button class="btn" type="submit">Enviar</button>
+                </form>
+            </section>
+            <footer>
+                <p>© 2025 Victor JSA</p>
+            </footer>
+        </div>
+    </section>
+
+    <!-- CORREÇÃO: número de WhatsApp deve ser colocado corretamente no link -->
+    <a href="https://wa.me/5599999999999" class="whatsapp" target="_blank" title="Fale no WhatsApp">⚖️</a>
+</body>
+
+<!-- LIBRAS -->
+<!-- CORREÇÃO: Tags <div> fora do <body> movidas para dentro do <body> -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget();
+</script>
+
+<!-- CORREÇÃO: script.js deve existir no projeto -->
+<script src="script.js"></script>
+
+</html>
