@@ -6,7 +6,6 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-
 /* Container principal com imagem de fundo */
 .hero {
     position: relative;
@@ -132,7 +131,7 @@ nav ul li a:hover {
 /* Botão amarelo */
 .amarelo {
     background-color: #fcd535;
-    color: #111;
+    color: white;
 }
 
 .amarelo:hover {
@@ -144,9 +143,11 @@ nav ul li a:hover {
 
 /* Botão preto */
 .preto {
-    background-color: #111;
+    color: #111;
+    background-color: #f2c300;
     color: white;
     border: 2px solid white;
+    border: 2px solid #111;
 }
 
 .preto:hover {
@@ -160,8 +161,7 @@ nav ul li a:hover {
 
 
 
-/* Seção curva opcional com SVG */
-section {
+Seção curva opcional com SVG section {
     position: relative;
     background-color: #dddddd4f;
     z-index: 1;
@@ -584,12 +584,7 @@ section svg {
 }
 
 
-/* Título */
-.contato h2 {
-    font-size: 2rem;
-    color: #333333ec;
-    margin-bottom: 20px;
-}
+
 
 
 /* Campos */
@@ -612,8 +607,7 @@ section svg {
 
 /* Botão */
 .btn {
-    background-color: #d4af37;
-    color: white;
+
     border: none;
     padding: 14px;
     font-size: 1rem;
@@ -649,3 +643,103 @@ footer {
 }
 
 
+@media screen and (max-width: 720px) {
+
+    * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+
+    }
+
+    .curva-topo {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+
+    .conteudo h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .conteudo p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .botoes .btn {
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .simulador h2 {
+        font-size: 1.5rem;
+        /* Dourado */
+        margin-bottom: 10px;
+    }
+
+
+
+
+    /* Campos de entrada */
+    .simulador input {
+        width: 98%;
+        padding: 5px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ffffff;
+        font-size: 1rem;
+        color: #333;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+    }
+
+    .simulador input:focus {
+        outline: none;
+        transform: scale(1.02);
+        border: 2px solid #d4af37;
+    }
+
+    /* Botão */
+    .simulador button {
+        padding: 5px;
+    }
+
+    /* Resultado */
+    .resultado {
+        /* margin-top: 25px; */
+        font-size: 0.8rem;
+    }
+}
